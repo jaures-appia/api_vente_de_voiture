@@ -1,0 +1,246 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "vente de voiture",
+    "version": "1.0.0",
+    "license": {
+      "name": "ISC"
+    },
+    "description": "la documentation officielle de l'api de vente de voiture"
+  },
+  "paths": {
+    "/api/v1/client": {
+      "post": {
+        "summary": "/api/v1/client",
+        "responses": {},
+        "tags": ["client"]
+      },
+      "get": {
+        "summary": "/api/v1/client",
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "number"
+                      },
+                      "firstName": {
+                        "type": "string"
+                      },
+                      "lastName": {
+                        "type": "string"
+                      },
+                      "contact": {
+                        "type": "string"
+                      },
+                      "createdAt": {
+                        "type": "string"
+                      },
+                      "updatedAt": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "firstName",
+                      "lastName",
+                      "contact",
+                      "createdAt",
+                      "updatedAt"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": ["client"]
+      }
+    },
+    "/api/v1/client/{id}": {
+      "get": {
+        "summary": "/api/v1/client/{id}",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {},
+        "tags": ["client"]
+      },
+      "put": {
+        "summary": "/api/v1/client/{id}",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {},
+        "tags": ["client"]
+      },
+      "delete": {
+        "summary": "/api/v1/client/{id}",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {},
+        "tags": ["client"]
+      }
+    },
+    "/api/v1/voiture": {
+      "post": {
+        "summary": "/api/v1/voiture",
+        "responses": {},
+        "tags": ["voiture"]
+      },
+      "get": {
+        "summary": "/api/v1/voiture",
+        "responses": {},
+        "tags": ["voiture"]
+      }
+    },
+    "/api/v1/voiture/{id}": {
+      "get": {
+        "summary": "/api/v1/voiture/{id}",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {},
+        "tags": ["voiture"]
+      },
+      "put": {
+        "summary": "/api/v1/voiture/{id}",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {},
+        "tags": ["voiture"]
+      },
+      "delete": {
+        "summary": "/api/v1/voiture/{id}",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {},
+        "tags": ["voiture"]
+      }
+    },
+    "/api/v1/achat": {
+      "post": {
+        "summary": "/api/v1/achat",
+        "responses": {},
+        "tags": ["achat"]
+      },
+      "get": {
+        "summary": "/api/v1/achat",
+        "responses": {},
+        "tags": ["achat"]
+      }
+    },
+    "/api/v1/achat/{id}": {
+      "get": {
+        "summary": "/api/v1/achat/{id}",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {},
+        "tags": ["achat"]
+      },
+      "put": {
+        "summary": "/api/v1/achat/{id}",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {},
+        "tags": ["achat"]
+      },
+      "delete": {
+        "summary": "/api/v1/achat/{id}",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {},
+        "tags": ["achat"]
+      }
+    }
+  },
+  "tags": [
+    {
+      "name" : "client",
+      "description" : "méthodes pour gérer les clients"
+    },
+    {
+      "name" : "voiture",
+      "description" : "méthodes pour gérer les voitures"
+    },
+    {
+      "name" : "achat",
+      "description" : "méthodes pour gérer les achats"
+    }
+  ]
+}
